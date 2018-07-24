@@ -294,7 +294,7 @@ sup {
     margin: 1em 0 3.3333333333333335em 0;
 }
 
-.hometown-tourist__headline{
+.planning-tools__headline{
     font-family: 'Marck Script', cursive;
     font-size: 1.900625em;
     background: #7a2519;
@@ -304,7 +304,7 @@ sup {
 }
 
 
-	.hometown-tourist__headline img {
+	.planning-tools__headline img {
 		margin: 0 0 .125em;
 		width: 80%;
 		max-width: 420px;
@@ -347,12 +347,12 @@ sup {
     width: 100%;
 }
 
-.page-footer{
+.planning-tools{
     border-top: 6px solid #fff;
     font-family: 'PT Mono', monospace;
 }
 
-.page-footer__section{
+.planning-tools__section{
     width: 77.5%;
     margin: 0 auto;
     max-width: 300px;
@@ -360,41 +360,41 @@ sup {
     border-bottom: 1px solid #fff;
 }
 
-.page-footer__section:last-child{
+.planning-tools__section:last-child{
     border-bottom: 0;
 }
 
-.page-footer__section-heading{
+.planning-tools__section-heading{
     text-transform: uppercase;
     font-family:'RefrigeratorDeluxeW01-B', Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;;
 }
 
-.page-footer__section-heading--primary{
+.planning-tools__section-heading--primary{
     margin-bottom: 1.4em;
 }
 
-.page-footer__section-heading--secondary{
+.planning-tools__section-heading--secondary{
     margin-bottom: 0.5em;
 }
 
-.page-footer__section-heading--primary,
-.page-footer__section-heading--secondary{
+.planning-tools__section-heading--primary,
+.planning-tools__section-heading--secondary{
     font-size: 1.55875em;
     line-height: 1.2;
     width: 100%;
 }
 
-.page-footer__section-heading__link,
-.page-footer__section-heading__link:link,
-.page-footer__section-heading__link:visited {
+.planning-tools__section-heading__link,
+.planning-tools__section-heading__link:link,
+.planning-tools__section-heading__link:visited {
 	text-decoration: underline;
 	color: #fff;
 }
 
 
 
-.page-footer__newsletter-list-link:link,
-.page-footer__newsletter-list-link:visited {
+.planning-tools__newsletter-list-link:link,
+.planning-tools__newsletter-list-link:visited {
 	text-transform: uppercase;
 	font-family: 'RefrigeratorDeluxeW01-B';
 	font-size: 1.55875em;
@@ -403,37 +403,37 @@ sup {
 	color: #fff;
 }
 
-	.page-footer__section-heading__link:hover, .page-footer__newsletter-list-link:hover{
+	.planning-tools__section-heading__link:hover, .planning-tools__newsletter-list-link:hover{
 		text-decoration: none;
 		color: #fff;
 	}
 
-.page-footer__section-copy {
+.planning-tools__section-copy {
     font-size: 0.6875em;
 }
 
-.page-footer__app-links{
+.planning-tools__app-links{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     margin-top: 1.625em;
 }
 
-.page-footer__app-link{
+.planning-tools__app-link{
     width: 48%;
     transition: opacity .2s;
     will-change: opacity;
 }
 
-.page-footer__app-link:hover{
+.planning-tools__app-link:hover{
     opacity: .7;
 }
 
-.page-footer__newsletter-list{
+.planning-tools__newsletter-list{
     width: 100%;
 }
 
-.page-footer__cleveland-image{
+.planning-tools__cleveland-image{
     width: 80%;
 	max-width: 300%;
     display: block;
@@ -465,7 +465,7 @@ sup {
     opacity: .7;
 }
 
-.btn--page-footer{
+.btn--planning-tools{
     display: block;
     margin: 1.5em auto;
 }
@@ -584,6 +584,35 @@ sup {
 }
 
 
+
+.page-footer__wrap{
+    font-size: 2.3675em;
+    padding: 0 1em 0 1em;
+}
+
+.page-footer__section{
+    padding: 0.5em 0;
+}
+
+.page-footer__section:last-child{
+    border-top: 1px solid #fff;
+}
+
+.page-footer__image{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.page-footer__share{
+    width: 180px;
+    margin: .5em auto 0 auto;
+}
+
+
+
+
+
 @media only screen and (min-width: 25em) { /* 400 */
     .mark-your-calendar__item:before{
         width: 1.6em;
@@ -623,7 +652,22 @@ sup {
         justify-content: space-evenly;
     }
 
-    .mark-your-calendar__item:last-child{
+    .page-footer{
+        border-top: 6px solid #fff;
+    }
+
+    .page-footer__wrap{
+        display: flex;
+        margin: 1em 0;
+    }
+
+    .page-footer__section{
+        width: 50%;
+    }
+
+    .page-footer__section:last-child{
+        border-top: 0;
+        border-left: 1px solid #fff;
     }
 }
 
@@ -664,7 +708,7 @@ sup {
         width: 50%;
     }
 
-    .hometown-tourist__headline{
+    .planning-tools__headline{
         font-size: 3.091875em;
         padding: .25em 0;
     }
@@ -685,21 +729,22 @@ sup {
 
 
 @media only screen and (min-width: 56.25em) { /* 900 */
-    .page-footer{
+    .planning-tools{
         padding-top: 2.5em;
+        padding-bottom: 2.5em;
     }
 
-    .page-footer__wrap{
+    .planning-tools__wrap{
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
+        /* max-width: 1200px; */
+        /* margin: 0 auto; */
         align-items: stretch;
         height: 100%;
     }
 
-    .page-footer__section{
+    .planning-tools__section{
         padding: 1em;
         border-bottom: 0;
         border-right: 1px solid #fff;
@@ -707,26 +752,20 @@ sup {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        width: 25%;
+        max-width: none;
     }
 
-    .page-footer__section:first-child{
-        width: 24.15812591508053%;
-    }
-
-    .page-footer__section:nth-child(2){
-        width: 30.380673499267935%;
-    }
-
-    .page-footer__section:nth-child(3){
-        width: 19.39970717423133%;
-    }
-
-    .page-footer__section:last-child{
-        width: 25.622254758418737%;
+    .planning-tools__section:last-child{
         border-right: 0;
     }
 
-    .btn--page-footer{
+    .planning-tools__image{
+        width: 300px;
+    }
+
+    .btn--planning-tools{
         padding: .25em 1.5em;
     }
 
@@ -806,7 +845,7 @@ sup {
         font-size: 2.875em;
     }
 
-    .btn--page-footer{
+    .btn--planning-tools{
         padding: .25em 2em;
     }
 }

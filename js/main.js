@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Setup for modal carousel
 	app.flkyModal = new Flickity('.cards--modal', {
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		prevNextButtons: false,
 		draggable: true
 	});
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}, false);
 	});
-
 
 	// Header and itinerary carousels are for mobile only
 	pointsBreak.init({
