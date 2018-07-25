@@ -720,6 +720,11 @@ sup {
         padding: .25em 0;
     }
 
+    .planning-tools__section-copy {
+        font-size: 0.875em;
+        width: 100%;
+    }
+
     .hometown-tourist__itinerary-wrap{
         display: flex;
         flex-wrap: wrap;
