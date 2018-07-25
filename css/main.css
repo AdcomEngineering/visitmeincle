@@ -403,13 +403,14 @@ sup {
 	color: #fff;
 }
 
-	.planning-tools__section-heading__link:hover, .planning-tools__newsletter-list-link:hover{
-		text-decoration: none;
-		color: #fff;
-	}
+.planning-tools__section-heading__link:hover, .planning-tools__newsletter-list-link:hover{
+    text-decoration: none;
+    color: #fff;
+}
 
 .planning-tools__section-copy {
     font-size: 0.6875em;
+    width: 100%;
 }
 
 .planning-tools__app-links{
@@ -417,6 +418,7 @@ sup {
     flex-wrap: nowrap;
     justify-content: space-around;
     margin-top: 1.625em;
+    width: 100%;
 }
 
 .planning-tools__app-link{
@@ -441,7 +443,8 @@ sup {
 }
 
 .addthis_inline_follow_toolbox{
-    margin-top: 1.5em;
+    width: 180px;
+    margin: 1.5em auto;
 }
 
 .social-links-list{
@@ -738,8 +741,6 @@ sup {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        /* max-width: 1200px; */
-        /* margin: 0 auto; */
         align-items: stretch;
         height: 100%;
     }
@@ -757,16 +758,25 @@ sup {
         max-width: none;
     }
 
+    .ie11 .planning-tools__section{
+        display: block;
+    }
+
     .planning-tools__section:last-child{
         border-right: 0;
     }
 
     .planning-tools__image{
         width: 300px;
+        display: block;
+        margin: 0 auto;
     }
 
     .btn--planning-tools{
         padding: .25em 1.5em;
+        max-width: 230px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .modal{
