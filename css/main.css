@@ -277,18 +277,19 @@ sup {
     text-transform: uppercase;
 }
 
-	.mark-your-calendar__item-title a,
-	.mark-your-calendar__item-title a:link,
-	.mark-your-calendar__item-title a:visited {
-		color: white;
-		text-decoration: underline;
-	}
-		.mark-your-calendar__item-title a:hover,
-		.mark-your-calendar__item-title a:active {
-			text-decoration: none;
-		}
+.mark-your-calendar__item-title a,
+.mark-your-calendar__item-title a:link,
+.mark-your-calendar__item-title a:visited {
+    color: white;
+    text-decoration: underline;
+}
 
-		.mark-your-calendar__date{
+.mark-your-calendar__item-title a:hover,
+.mark-your-calendar__item-title a:active {
+    text-decoration: none;
+}
+
+.mark-your-calendar__date{
     font-family: 'PT Mono', monospace;
     font-size: 0.75em;
     margin: 1em 0 3.3333333333333335em 0;
@@ -303,18 +304,14 @@ sup {
 
 }
 
+.planning-tools__headline img {
+    margin: 0 0 .125em;
+    width: 80%;
+    max-width: 420px;
+}
 
-	.planning-tools__headline img {
-		margin: 0 0 .125em;
-		width: 80%;
-		max-width: 420px;
+.hometown-tourist__itinerary-wrap{}
 
-	}
-
-
-	.hometown-tourist__itinerary-wrap{
-
-	}
 .hometown-tourist__itinerary-item{
     width: 100%;
     position: relative;
@@ -390,8 +387,6 @@ sup {
 	text-decoration: underline;
 	color: #fff;
 }
-
-
 
 .planning-tools__newsletter-list-link:link,
 .planning-tools__newsletter-list-link:visited {
@@ -560,6 +555,7 @@ sup {
 .cards__image--modal{
     border: 9px solid #fff;
     cursor: default;
+    min-height: 186px;
 }
 
 .cards__card--modal{
@@ -621,6 +617,10 @@ sup {
         width: 1.6em;
         height: 1.4375em;
     }
+
+    .cards__image--modal{
+        min-height: 246px;
+    }
 }
 
 @media only screen and (min-width: 37.5em) { /* 600 */
@@ -671,6 +671,10 @@ sup {
     .page-footer__section:last-child{
         border-top: 0;
         border-left: 1px solid #fff;
+    }
+
+    .cards__image--modal{
+        min-height: 259px;
     }
 }
 
@@ -803,6 +807,10 @@ sup {
 
     .cards__card--modal.share .flickity-page-dots{
         display: none;
+    }
+
+    .cards__image--modal{
+        min-height: 406px;
     }
 }
 
