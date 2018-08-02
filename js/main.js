@@ -9,13 +9,12 @@ if ('-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in d
 
 document.addEventListener('DOMContentLoaded', function () {
 	var cards = [].slice.call(document.querySelectorAll('.cards--header .cards__card')),
-		// cardImages = [].slice.call(document.querySelectorAll('.cards--header .cards__image')),
-		// imgLoaded = [],
 		modal = document.querySelector('.modal'),
 		modalShareBtns = [].slice.call(document.querySelectorAll('.btn--share-card')),
 		modalWrap = document.querySelector('.modal-wrap'),
 		modalBg = document.querySelector('.modal-bg'),
-		modalClose = document.querySelector('.modal__close-btn');
+		modalClose = document.querySelector('.modal__close-btn'),
+		socialBtns = [].slice.call(document.querySelectorAll('.at-follow-btn'));
 
 
 	// Header and itinerary carousels are for mobile only
@@ -111,6 +110,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			}, false);
 		});
 	}
-});
 
+	// Open social links in new tab/window
+	socialBtns.forEach(function (btn) {
+		btn.setAttribute('target', '_blank');
+	});
+
+});
 
