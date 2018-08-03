@@ -712,7 +712,8 @@ sup {
     }
 
     .events__event{
-        width: 50%;
+        width: 100%;
+        background-position: center center;
     }
 
     .planning-tools__headline{
