@@ -51,17 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 
-	// Setup for modal carousel
+	// Setup for modal
 	if (modal) {
-		app.flkyModal = new Flickity('.cards--modal', {
-			adaptiveHeight: false,
-			resize: true,
-			prevNextButtons: false,
-			draggable: true
-		});
-
-		app.flkyModal.closeModal = function () {
+		app.closeModal = function () {
 			modalWrap.classList.remove('show');
+			modalWrap.querySelector('[data-selected="true"]').removeAttribute('data-selected');
 			modalShareBtns.forEach(function (btn) {
 				btn.parentElement.classList.remove('share');
 			});
@@ -71,31 +65,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Click a card to open modal
 		cards.forEach(function (card, idx) {
 			card.addEventListener('click', function (e) {
-				app.flkyModal.select(idx);
+				var cards = [].slice.call(document.querySelectorAll('.modal-wrap .cards__card'));
+				cards[idx].setAttribute('data-selected', true);
 				modalWrap.classList.add('show');
-			});
-		});
-
-		// Change modal carousel item = remove sharing screen
-		app.flkyModal.on('change', function () {
-			var cardsItems = [].slice.call(document.querySelectorAll('.cards__card--modal'));
-			cardsItems.forEach(function (item) {
-				item.classList.remove('share');
-				var modalCarouselDots = [].slice.call(document.querySelectorAll('.modal .flickity-page-dots'));
-				modalCarouselDots.forEach(function (dots) {
-					dots.style.display = 'block';
-				});
 			});
 		});
 
 		// Close button for modal
 		modalClose.addEventListener('click', function () {
-			app.flkyModal.closeModal();
+			app.closeModal();
 		});
 
 		// Close modal when background is clicked
 		modalBg.addEventListener('click', function () {
-			app.flkyModal.closeModal();
+			app.closeModal();
 		});
 
 		// Toggle share screen
