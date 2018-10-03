@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				var itineraryWrapper = document.querySelector('.hometown-tourist__itinerary-wrap'),
 					mobileCarouselSettings = {
 						autoPlay: true,
+						// autoPlay: false,
 						prevNextButtons: false,
 						wrapAround: true,
 						resize: true,
@@ -65,10 +66,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Click a card to open modal
 		cards.forEach(function (card, idx) {
 			card.addEventListener('click', function (e) {
-				var cards = [].slice.call(document.querySelectorAll('.modal-wrap .cards__card'));
-				cards[idx].setAttribute('data-selected', true);
-				modalWrap.classList.add('show');
-			});
+				if (pointsBreak.getWidth() < 769) {
+					card.classList.toggle('flip');
+				}
+
+				// var cards = [].slice.call(document.querySelectorAll('.modal-wrap .cards__card'));
+				// cards[idx].setAttribute('data-selected', true);
+				// modalWrap.classList.add('show');
+			}, true);
 		});
 
 		// Close button for modal
