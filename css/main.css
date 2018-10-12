@@ -1,11 +1,6 @@
 /*RESET*/
 *,html{-webkit-font-smoothing:antialiased}*,ol,ul{-webkit-padding-start:0}article,aside,details,figcaption,figure,footer,header,hgroup,hr,main,nav,section,summary{display:block}button,hr,input[type=datetime-local],input[type=month],input[type=time],input[type=week],input[type=url],input[type=tel],input[type=color],input[type=button],input[type=email],input[type=password],input[type=text],input[type=number],input[type=date],input[type=search],input[type=datetime],textarea{padding:0}*{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}html{overflow-y:scroll}a,abbr,acronym,address,article,aside,audio,b,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strong,sub,summary,table,tbody,td,tfoot,th,thead,time,tr,u,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font-weight:inherit;font-style:inherit;font-family:inherit;vertical-align:baseline}em,i,mark{font-style:italic}audio,canvas,img,input,select,svg,video{vertical-align:middle}img{max-width:100%;height:auto;-ms-interpolation-mode:bicubic;image-rendering:optimizeQuality}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400}b,mark,strong{font-weight:700}ol,ul{list-style-type:none}blockquote,q{quotes:"" ""}blockquote:after,blockquote:before,q:after,q:before{content:""}a,ins{text-decoration:none}ins,mark{background-color:#ff9;color:#000}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}hr{height:1px;border:0;border-top:1px solid #ccc;margin:1em 0}pre{padding:1em;white-space:pre;white-space:pre-wrap;white-space:pre-line;word-wrap:break-word}a,button,input[type=submit],input[type=button],label[for]{cursor:pointer}::-moz-selection{background:#aeaeae;text-shadow:none}::selection{background:#aeaeae;text-shadow:none}:required{-webkit-box-shadow:none;box-shadow:none}u{text-decoration:underline}code,pre{font-family:Monaco,Courier,monospace}.ie6 input,input[type=radio]{vertical-align:text-bottom}input[type=checkbox]{vertical-align:bottom}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input,textarea{outline:0;resize:none;-webkit-appearance:none;-moz-appearance:none;-webkit-border-radius:0;-moz-border-radius:0}input[style*=appearance],input[type=email],input[type=password],input[type=text],input[type=number],input[type=date],textarea{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important}input[type=number]{-moz-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box}input[type=datetime-local],input[type=month],input[type=time],input[type=week],input[type=date],input[type=datetime]{display:-webkit-inline-flex}
 
-/*! Flickity v2.1.2
-https://flickity.metafizzy.co
----------------------------------------------- */
-.flickity-enabled{position:relative}.flickity-enabled:focus{outline:0}.flickity-viewport{overflow:hidden;position:relative;height:100%}.flickity-slider{position:absolute;width:100%;height:100%}.flickity-enabled.is-draggable{-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.flickity-enabled.is-draggable .flickity-viewport{cursor:move;cursor:-webkit-grab;cursor:grab}.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}.flickity-button{position:absolute;background:hsla(0,0%,100%,.75);border:none;color:#333}.flickity-button:hover{background:#fff;cursor:pointer}.flickity-button:focus{outline:0;box-shadow:0 0 0 5px #19f}.flickity-button:active{opacity:.6}.flickity-button:disabled{opacity:.3;cursor:auto;pointer-events:none}.flickity-button-icon{fill:#333}.flickity-prev-next-button{top:50%;width:44px;height:44px;border-radius:50%;transform:translateY(-50%)}.flickity-prev-next-button.previous{left:10px}.flickity-prev-next-button.next{right:10px}.flickity-rtl .flickity-prev-next-button.previous{left:auto;right:10px}.flickity-rtl .flickity-prev-next-button.next{right:auto;left:10px}.flickity-prev-next-button .flickity-button-icon{position:absolute;left:20%;top:20%;width:60%;height:60%}.flickity-page-dots{position:absolute;width:100%;bottom:-25px;padding:0;margin:0;list-style:none;text-align:center;line-height:1}.flickity-rtl .flickity-page-dots{direction:rtl}.flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:.25;cursor:pointer}.flickity-page-dots .dot.is-selected{opacity:1}
-
 .btn{
     font-size: 1.2em;
     font-family:'RefrigeratorDeluxeW01-B', Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;;
@@ -88,19 +83,18 @@ sup {
     margin: 3em auto 0 auto;
 }
 
-.cards--header{
-    max-width: 365px;
-}
-
 .cards__card{
-    width: 100%;
+    width: 280px;
     position: relative;
     transition: border-color .2s;
-    /* overflow: hidden; */
     cursor: pointer;
 }
 
-.card-figure__image {
+.cards__card-front{
+    overflow: hidden;
+}
+
+.card-figure__image{
     display: block;
     margin: 1em auto 2em;
     width: 100%;
@@ -108,22 +102,22 @@ sup {
 }
 
 .cards__image{
-    width: 100%;
-    height: auto;
+    max-width: none;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .cards__share-caption-wrapper{
-    /* background: rgba(117, 37, 23, 0); */
-    background: #fff;
+    background: #000;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     color: #fff;
-    /* transition: background .3s; */
-
-    display: flex;
 }
 
 .cards__share-caption-text{
@@ -139,38 +133,141 @@ sup {
     transition: .2s;
 }
 
-.cards__card--header:hover{
+.cards__card--header{
+    margin: 0 auto 1em auto;
 }
 
-/* .cards__card--header:hover .cards__share-caption-wrapper{
-    background: rgba(117, 37, 23, .8);
+.cards__card-front{
+    position: relative;
+    border: 11px solid #fff;
+    width: 100%;
 }
 
-.cards__card--header:hover .cards__share-caption-text{
-    transition: all .6s cubic-bezier(.87, -.41, .19, 1.44) .25s;
-	opacity: 1;
-    transform: translateY(50%);
-} */
-
-.flickity-page-dots{
-    position: static;
-    margin: 1em 0 1.625em 0;
+.cards__card-top-label{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 115px;
+    height: 119px;
+    margin-left: -57px;
 }
 
-.flickity-page-dots .dot{
-    color: #fff;
-    border: 1px solid #fff;
-    background: #fff;
-    opacity: 1;
-    box-shadow: inset 0 0 0 1px #fff;
-    transition: .2s;
+.cards__card-message{
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.flickity-page-dots .dot.is-selected{
-    color: #fff;
-    background: #7a2519;
-    box-shadow: inset 0 0 0 1px #d3d6d3;
+.cards__card-logo{
+    position: absolute;
+	width: 150px;
+	bottom: 4.5em;
+	left: 50%;
+	margin-left: -75px;
+	right: 1em;
 }
+
+.cards__card-flip-indicator{
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+
+    width: 57px;
+    height: 43px;
+    margin-left: -28px;
+}
+
+
+
+
+
+
+
+.cards__share-caption-wrapper{
+    position: relative;
+    border: 11px solid #fff;
+    width: 100%;
+    overflow: hidden;
+}
+
+.share-card__itinerary-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cards__stamp{
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    width: 44px;
+    height: 55px;
+}
+
+
+.cards__card-text{
+    font-family: 'Homemade Apple', cursive;
+    position: relative;
+    z-index: 1;
+    font-size: 1.75em;
+    padding-left: 1em;
+    transform: rotate(-4.01deg);
+}
+
+.cards__card-text--intro{
+    margin-top: 65px;
+}
+
+.cards__card-text--body{
+    display: none;
+}
+
+.cards__card-headline{
+    font-family: 'RefrigeratorDeluxeW01-B', Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    z-index: 1;
+    line-height: 1;
+    margin: .5em 0;
+}
+
+.btn--card-back{
+    margin: 0 auto;
+	display: block;
+	width: 200px;
+	padding: .25em 0;
+}
+
+.cards__card-visit-me-img{
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    display: block;
+    margin: 2em auto;
+}
+
+.share-card__copy{
+    position: relative;
+    z-index: 1;
+}
+
+.share-card__headline{
+    font-family: 'RefrigeratorDeluxeW01-B', Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.social-links-list{
+    width: 75px;
+    margin: 0 auto;
+}
+
 
 .events__event{
     background-size: cover;
@@ -381,6 +478,22 @@ sup {
     margin-bottom: 0.5em;
 }
 
+.planning-tools__section--newsletter .planning-tools__section-heading--primary{
+    position: relative;
+    padding-left: 1em;
+}
+
+.planning-tools__section--newsletter .planning-tools__section-heading--primary:before{
+    position: absolute;
+	top: .25em;
+	left: 0;
+	content: "";
+	width: 0.6415396952686447em;
+	height: 0.6415396952686447em;
+	background: #7a2519;
+	margin-right: 0.6875em;
+}
+
 .planning-tools__section-heading--primary,
 .planning-tools__section-heading--secondary{
     font-size: 1.55875em;
@@ -393,6 +506,23 @@ sup {
 .planning-tools__section-heading__link:visited {
 	text-decoration: underline;
 	color: #fff;
+}
+
+.planning-tools__newsletter-list-item{
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: .5em;
+}
+
+.planning-tools__newsletter-list-item:before{
+    position: absolute;
+	top: .25em;
+	left: 0;
+	content: "";
+	width: 16px;
+	height: 16px;
+	background: #7a2519;
+	margin-right: 0.6875em;
 }
 
 .planning-tools__newsletter-list-link:link,
@@ -450,7 +580,7 @@ sup {
 
 .dcle-planning-tools{
     padding: 0 0.25em;
-	margin: 5em auto;
+	margin: 0 auto;
 	width: 100%;
 	max-width: 1200px;
 }
@@ -593,91 +723,19 @@ sup {
     margin: 1.5em auto;
 }
 
-.modal-bg{
-    background: rgba(0, 0, 0, 0);
-    width: 0;
-    height: 0;
-}
-
-.show .modal-bg{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 9;
-}
-
-.modal{
-    background: rgba(255, 255, 255, 0);
-    width: 90%;
-    left: 5%;
-    position: fixed;
-    top: -250%;
-    transition: .2s;
-    z-index: 10;
-}
-
-.show .modal{
-    position: fixed;
-    top: 0;
-    transition: .4s .3s;
-}
-
-.show .modal__close-btn{
-    color: #fff;
-    position: absolute;
-    font-style: normal;
-    font-size: 1.5em;
-    cursor: pointer;
-    top: .5em;
-    right: 0;
-}
-
-.modal__headline{
-    font-family:'RefrigeratorDeluxeW01-B', Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    line-height: 1;
-    color: #000;
-    text-align: center;
-}
-
-.cards__image{
-    width: 100%;
-    height: auto;
-}
-
-.modal__share{
-    display: none;
-}
-
-.modal.share .modal__share{
-    display: block;
-}
-
-.modal.share .cards--modal{
-    display: none;
-}
 
 .share-card{
-    /* display: none; */
     padding: 2em 1em;
 }
 
-.cards__card--modal.share .cards__image--modal{
-    /* display: none; */
-}
+.cards__card--modal.share .cards__image--modal{}
 
 .cards__card--modal.share .share-card{
     display: block;
     background: #fff;
 }
 
-.cards__card--modal .share-card{/*****************************************************/
+.cards__card--modal .share-card{
     display: block;
     background: #fff;
 }
@@ -700,17 +758,7 @@ sup {
     padding: .25em 2em;
 }
 
-.cards__card--modal.share .btn--share-card{
-    /* display: none; */
-}
-
-.social-links-list--modal{
-    padding: 1.4375em 3em;
-}
-
-.modal .flickity-page-dots{
-    margin: 0;
-}
+.cards__card--modal.share .btn--share-card{}
 
 
 
@@ -732,19 +780,16 @@ sup {
 }
 
 .share-card{
-    display: flex !important; /*******************************************************/
     overflow: hidden;
-    padding: 0 !important; /*******************************************************/
 }
 
 .share-card__itinerary-image{
-    width: 40%;
+    width: auto;
+    height: 100%;
+    max-width: none;
 }
 
-.share-card__copy{
-    width: 60%;
-    padding-top: 2em;
-}
+.share-card__copy{}
 
 .debug .flip-container:before,
 .debug .flip-container:after{
@@ -764,7 +809,8 @@ sup {
 }
 
 /* flip the pane when clicked (Mobile) */
-.flip-container.flip .flipper{
+.flip-container.flip .flipper,
+.flip-container.showFlip .flipper{
     transform: rotateY(180deg);
 }
 
@@ -775,12 +821,9 @@ sup {
 }
 
 .flip-container,
-.front, .back{
-    /* width: 320px; */
-    width: 100%;
-    /* height: 480px; */
-    /* height: 365px; */
-    height: 324px;
+.front,
+.back{
+    height: 525px;
 }
 
 /* flip speed goes here */
@@ -829,19 +872,7 @@ sup {
 	left: 0;
 	width: 100%;
     height: 100%;
-    /* border: 6px solid #fff; */
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -900,13 +931,10 @@ sup {
     }
 
     .modal__headline{
-        /* font-size: 2em; */
         font-size: 1.5em;
     }
 
-    .social-links-list--modal {
-        /* padding: 1.4375em 4em; */
-    }
+    .social-links-list--modal{}
 
     .gallery__heading{
         font-size: 2.36875em;
@@ -953,21 +981,18 @@ sup {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        width: 730px;
-        max-width: none;
+        max-width: 775px;
         margin: 2em auto;
-    }
-
-    .flip-container,
-    .front,
-    .back{
-        height: 197px;
     }
 
     .cards--header .cards__card{
         width: 48%;
         margin-bottom: 1em;
     }
+
+    .flip-container,
+    .front,
+    .back{}
 
     .gallery__header{
         padding: 2.75em 1.5em;
@@ -1062,20 +1087,6 @@ sup {
         margin-right: auto;
     }
 
-    .modal{
-        width: 600px;
-        left: 50%;
-        margin-left: -300px;
-    }
-
-    .modal__headline{
-        /* font-size: 3.805625em; */
-    }
-
-    .social-links-list--modal{
-        /* padding: 1.4375em 10em; */
-    }
-
     .social-links-list__item{
         padding: .3em;
     }
@@ -1098,6 +1109,14 @@ sup {
 }
 
 @media only screen and (min-width: 60em) { /* 960 */
+    .cards--header{
+        max-width: 900px;
+    }
+
+    .flip-container,
+    .front,
+    .back{}
+
     .hometown-tourist__itinerary-wrap{
         flex-wrap: nowrap;
     }
@@ -1114,24 +1133,148 @@ sup {
     }
 }
 
-@media only screen and (min-width: 72.1875em) { /* 1155 */
+
+@media only screen and (min-width: 62.5em) { /* 1000 */
     .cards--header{
-        width: 1000px;
+        max-width: 980px;
     }
 
     .flip-container,
     .front,
     .back{
-        height: 270px;
+        height: 345px;
     }
 
-    .modal__headline{
+    .cards__card-top-label{
+        width: 57px;
+        height: auto;
+        margin-left: -28px;
+    }
+
+    .cards__card-logo{
+        bottom: 1em;
+        left: auto;
+        width: 100px;
+    }
+
+    .share-card__itinerary-image{
+	    right: auto;
+    }
+
+    .cards__share-content-wrapper{
+        width: 60%;
+        float: right;
+        font-size: 12px;
+        color: #000;
+        background: #fff;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+    }
+
+    .cards__stamp{
+        filter: invert(1);
+    }
+
+    .cards__card-text{
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .cards__card-text--intro{
+        margin-top: 40px;
+    }
+
+    .cards__card-headline{
         font-size: 2em;
+        max-width: 40%;
+        position: absolute;
+        left: -55%;
+        color: #fff;
+        bottom: 2.5em;
+    }
+
+    .cards__card-visit-me-img{
+        filter: invert(1);
+        width: 150px;
+        margin-bottom: .5em;
+    }
+
+    .btn--card-back{
+        font-size: 16px;
+        position: absolute;
+        left: -55%;
+        width: 40%;
+        bottom: 1.5em;
+    }
+
+    .social-links-list{
+        padding-top: 0;
     }
 }
 
 
+
+
+@media only screen and (min-width: 72.1875em) { /* 1155 */
+}
+
+
 @media only screen and (min-width: 75em) { /* 1200 */
+    .cards--header{
+        max-width: 1000px;
+    }
+
+    .flip-container,
+    .front,
+    .back{
+        /* height: 412px; */
+    }
+
+    .cards__card-top-label{
+        width: 87px;
+        margin-left: -70px;
+        left: 20%;
+    }
+
+    .cards__card-message{
+        width: 245px;
+        margin-left: -122px;
+    }
+
+    .cards__card-text{
+        font-size: 1.6em;
+    }
+
+    .cards__card-text--body{
+        display: block;
+    }
+
+    .cards__card-logo{}
+
+    .share-card__itinerary-image{}
+
+    .cards__share-content-wrapper{}
+
+    .cards__card-text--intro{
+        margin-top: 33px;
+    }
+
+    .cards__card-headline{}
+
+    .cards__card-visit-me-img{}
+
+    .btn--card-back{}
+
+    .social-links-list{}
+
+
+
+
+
+
+
+
     .mark-your-calendar{
         display: flex;
         margin-bottom: 2em;
@@ -1170,14 +1313,22 @@ sup {
 
 
 @media only screen and (min-width: 83.125em) { /* 1330 */
+}
+
+@media only screen and (min-width: 87.5em) { /* 1400 */
     .cards--header{
-        width: 1200px;
+        max-width: 1250px;
     }
 
     .flip-container,
     .front,
     .back{
-        height: 330px;
+        height: 400px;
+    }
+
+    .cards__image{
+        width: 100%;
+        height: auto;
     }
 }
 

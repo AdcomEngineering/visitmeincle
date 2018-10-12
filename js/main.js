@@ -7,97 +7,52 @@ var app = {},
 if ('-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style) { document.documentElement.className += ' ie11'; }
 
 
+// Determine if an element is in the visible viewport
+app.inView = function (el) {
+	var edges = el.getBoundingClientRect(),
+		html = document.documentElement,
+		w = window;
+
+	return (
+		edges.top >= 0
+		&& edges.left >= 0
+		&& edges.bottom <= (w.innerHeight || html.clientHeight)
+		&& edges.right <= (w.innerWidth || html.clientWidth)
+	);
+};
+
+
+app.demoFlip = function (card) {
+	if (app.inView(card) && !card.classList.contains('showFlip') && !card.classList.contains('showedFlip')) {
+		card.classList.add('showFlip');
+		setTimeout(function () {
+			card.classList.remove('showFlip');
+			card.classList.add('showedFlip');
+		}, 600);
+	}
+};
+
 document.addEventListener('DOMContentLoaded', function () {
 	var cards = [].slice.call(document.querySelectorAll('.cards--header .cards__card')),
-		modal = document.querySelector('.modal'),
-		modalShareBtns = [].slice.call(document.querySelectorAll('.btn--share-card')),
-		modalWrap = document.querySelector('.modal-wrap'),
-		modalBg = document.querySelector('.modal-bg'),
-		modalClose = document.querySelector('.modal__close-btn'),
 		socialBtns = [].slice.call(document.querySelectorAll('.at-follow-btn'));
 
-
-	// Header and itinerary carousels are for mobile only
-	pointsBreak.init({
-		'W<769': function () {
-			if (!app.flkyCards && !app.flkyItinerary) {
-				var itineraryWrapper = document.querySelector('.hometown-tourist__itinerary-wrap'),
-					mobileCarouselSettings = {
-						autoPlay: true,
-						// autoPlay: false,
-						prevNextButtons: false,
-						wrapAround: true,
-						resize: true,
-						draggable: true,
-						dragThreshold: 1
-					};
-
-				if (cards && cards.length > 0) {
-					app.flkyCards = new Flickity('.cards--header', mobileCarouselSettings);
-				}
-
-				if (itineraryWrapper) {
-					app.flkyItinerary = new Flickity('.hometown-tourist__itinerary-wrap', mobileCarouselSettings);
-				}
-			}
-		},
-		'W>768': function () {
-			if (app.flkyCards && app.flkyItinerary) {
-				app.flkyCards.destroy();
-				app.flkyItinerary.destroy();
-				app.flkyCards = undefined;
-				app.flkyItinerary = undefined;
-			}
-		}
+	cards.forEach(function (card) {
+		app.demoFlip(card);
 	});
 
-
-	// Setup for modal
-	if (modal) {
-		app.closeModal = function () {
-			modalWrap.classList.remove('show');
-			modalWrap.querySelector('[data-selected="true"]').removeAttribute('data-selected');
-			modalShareBtns.forEach(function (btn) {
-				btn.parentElement.classList.remove('share');
-			});
-			modal.classList.remove('share');
-		};
-
-		// Click a card to open modal
-		cards.forEach(function (card, idx) {
-			card.addEventListener('click', function (e) {
-				if (pointsBreak.getWidth() < 769) {
-					card.classList.toggle('flip');
-				}
-
-				// var cards = [].slice.call(document.querySelectorAll('.modal-wrap .cards__card'));
-				// cards[idx].setAttribute('data-selected', true);
-				// modalWrap.classList.add('show');
-			}, true);
+	window.addEventListener('scroll', function () {
+		cards.forEach(function (card) {
+			app.demoFlip(card);
 		});
+	});
 
-		// Close button for modal
-		modalClose.addEventListener('click', function () {
-			app.closeModal();
-		});
-
-		// Close modal when background is clicked
-		modalBg.addEventListener('click', function () {
-			app.closeModal();
-		});
-
-		// Toggle share screen
-		modalShareBtns.forEach(function (btn) {
-			btn.addEventListener('click', function (e) {
-				var modalCarouselDots = [].slice.call(document.querySelectorAll('.modal .flickity-page-dots'));
-				e.preventDefault();
-				btn.parentElement.classList.add('share');
-				modalCarouselDots.forEach(function (dots) {
-					dots.style.display = 'none';
-				});
-			}, false);
-		});
-	}
+	cards.forEach(function (card, idx) {
+		card.addEventListener('click', function (e) {
+			if (pointsBreak.getWidth() < 769) {
+				card.classList.toggle('flip');
+			}
+		}, true);
+	});
 
 	// Open social links in new tab/window
 	socialBtns.forEach(function (btn) {
