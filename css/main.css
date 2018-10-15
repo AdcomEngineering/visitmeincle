@@ -19,7 +19,8 @@
 
 .btn--jump-down:after{
     content: "\25bc";
-    transform: translateX(1em);
+    -webkit-transform: translateX(1em);
+            transform: translateX(1em);
     display: inline-block;
 }
 
@@ -86,6 +87,7 @@ sup {
 .cards__card{
     width: 280px;
     position: relative;
+    -webkit-transition: border-color .2s;
     transition: border-color .2s;
     cursor: pointer;
 }
@@ -123,13 +125,15 @@ sup {
 .cards__share-caption-text{
     text-align: center;
 	text-transform: uppercase;
-	transform: translateY(-200%);
+	-webkit-transform: translateY(-200%);
+	        transform: translateY(-200%);
 	position: absolute;
 	width: 100%;
     bottom: 50%;
     font-family:'RefrigeratorDeluxeW01-B', Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;;
     font-size: 3.07875em;
 	opacity: 0;
+    -webkit-transition: .2s;
     transition: .2s;
 }
 
@@ -148,7 +152,8 @@ sup {
     top: 0;
     left: 50%;
     width: 115px;
-    height: 119px;
+    /* height: 119px; */
+    height: 90px;
     margin-left: -57px;
 }
 
@@ -158,7 +163,8 @@ sup {
     left: 50%;
     margin-left: -100px;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 .cards__card-logo{
@@ -167,7 +173,8 @@ sup {
 	bottom: 4.5em;
 	left: 50%;
 	margin-left: -75px;
-	right: 1em;
+    right: 1em;
+    height: 47px;
 }
 
 .cards__card-flip-indicator{
@@ -214,7 +221,8 @@ sup {
     z-index: 1;
     font-size: 1.75em;
     padding-left: 1em;
-    transform: rotate(-4.01deg);
+    -webkit-transform: rotate(-4.01deg);
+            transform: rotate(-4.01deg);
 }
 
 .cards__card-text--intro{
@@ -546,15 +554,20 @@ sup {
 }
 
 .planning-tools__app-links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-top: 1.625em;
     width: 100%;
 }
 
 .planning-tools__app-link{
     width: 48%;
+    -webkit-transition: opacity .2s;
     transition: opacity .2s;
     will-change: opacity;
 }
@@ -607,7 +620,10 @@ sup {
 
 .dcle-planning-tools__link{
     color: #fff;
+    -webkit-transition: .2s;
     transition: .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     will-change: opacity;
 }
@@ -619,17 +635,26 @@ sup {
 
 .dcle-planning-tools__image{
     margin-right: .75em;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
     transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
     will-change: opacity;
 }
 
 .dcle-planning-tools__link:hover .dcle-planning-tools__image{
-    transform: scale(0.99);
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
 }
 
 .dcle-planning-tools__copy-wrap{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .dcle-planning-tools__copy{
@@ -658,6 +683,8 @@ sup {
 @media only screen and (min-width: 39.6875em) { /* 635 */
     .dcle-planning-tools__list{
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -805,18 +832,29 @@ sup {
 /********************************  Card flip animations  ********************************/
 
 .flip-container {
-	perspective: 1000px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
 }
 
 /* flip the pane when clicked (Mobile) */
 .flip-container.flip .flipper,
 .flip-container.showFlip .flipper{
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+}
+
+.ie11 .flip-container:hover .flipper{
+    transform: rotateY(360deg);
 }
 
 @media only screen and (min-width: 769px) {
     .flip-container:hover .flipper{
+        -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);
+    }
+
+    .ie11 .flip-container:hover .flipper{
+        transform: rotateY(360deg);
     }
 }
 
@@ -828,8 +866,10 @@ sup {
 
 /* flip speed goes here */
 .flipper{
+	-webkit-transition: 0.6s;
 	transition: 0.6s;
-	transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 
 	position: relative;
 }
@@ -837,7 +877,8 @@ sup {
 /* hide back of pane during swap */
 .front,
 .back{
-	backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
 	position: absolute;
 	top: 0;
@@ -848,15 +889,40 @@ sup {
 .front{
 	z-index: 2;
 	/* for firefox 31 */
-	transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back{
-	transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.ie11 .flip-container .back{
+    transform:rotateY(180deg);
+    backface-visibility:hidden;
+}
+
+.ie11 .flip-container:hover .back{
+    transform: rotateY(360deg);
+}
+
+.ie11 .flip-container:hover .front{
+    transform: rotateY(180deg);
 }
 
 /********************************  End card flip animations  ********************************/
+
+
+
+
+
+
+
+
+
+
 
 
 .cards__video-wrap{
@@ -945,8 +1011,12 @@ sup {
     }
 
     .mark-your-calendar__list{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
 
     .page-footer{
@@ -954,6 +1024,8 @@ sup {
     }
 
     .page-footer__wrap{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin: 1em 0;
     }
@@ -978,9 +1050,13 @@ sup {
     }
 
     .cards--header{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         max-width: 775px;
         margin: 2em auto;
     }
@@ -1006,6 +1082,8 @@ sup {
     }
 
     .events{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -1025,8 +1103,11 @@ sup {
     }
 
     .hometown-tourist__itinerary-wrap{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 
     .hometown-tourist__itinerary-item{
@@ -1049,7 +1130,9 @@ sup {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        align-items: stretch;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
         height: 100%;
     }
 
@@ -1057,10 +1140,19 @@ sup {
         padding: 1em;
         border-bottom: 0;
         border-right: 1px solid #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         width: 25%;
         max-width: none;
@@ -1118,7 +1210,8 @@ sup {
     .back{}
 
     .hometown-tourist__itinerary-wrap{
-        flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     }
 
     .hometown-tourist__itinerary-item{
@@ -1147,7 +1240,7 @@ sup {
 
     .cards__card-top-label{
         width: 57px;
-        height: auto;
+        /* height: auto; */
         margin-left: -28px;
     }
 
@@ -1173,7 +1266,8 @@ sup {
     }
 
     .cards__stamp{
-        filter: invert(1);
+        -webkit-filter: invert(1);
+                filter: invert(1);
     }
 
     .cards__card-text{
@@ -1195,7 +1289,8 @@ sup {
     }
 
     .cards__card-visit-me-img{
-        filter: invert(1);
+        -webkit-filter: invert(1);
+                filter: invert(1);
         width: 150px;
         margin-bottom: .5em;
     }
@@ -1276,6 +1371,8 @@ sup {
 
 
     .mark-your-calendar{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-bottom: 2em;
         padding-top: 3.5em;
