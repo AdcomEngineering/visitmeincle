@@ -644,7 +644,7 @@ sup {
 
 .dcle-planning-tools__link:hover .dcle-planning-tools__image{
     -webkit-transform: scale(0.99);
-            transform: scale(0.99);
+    transform: scale(0.99);
 }
 
 .dcle-planning-tools__copy-wrap{
@@ -653,8 +653,8 @@ sup {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .dcle-planning-tools__copy{
@@ -843,7 +843,7 @@ sup {
     transform: rotateY(180deg);
 }
 
-.ie11 .flip-container:hover .flipper{
+_:-ms-fullscreen, :root .flip-container:hover .flipper{
     transform: rotateY(360deg);
 }
 
@@ -853,7 +853,7 @@ sup {
         transform: rotateY(180deg);
     }
 
-    .ie11 .flip-container:hover .flipper{
+    _:-ms-fullscreen, :root .flip-container:hover .flipper{
         transform: rotateY(360deg);
     }
 }
@@ -899,16 +899,16 @@ sup {
     transform: rotateY(180deg);
 }
 
-.ie11 .flip-container .back{
+_:-ms-fullscreen, :root .flip-container .back{
     transform:rotateY(180deg);
     backface-visibility:hidden;
 }
 
-.ie11 .flip-container:hover .back{
+_:-ms-fullscreen, :root .flip-container:hover .back{
     transform: rotateY(360deg);
 }
 
-.ie11 .flip-container:hover .front{
+_:-ms-fullscreen, :root .flip-container:hover .front{
     transform: rotateY(180deg);
 }
 
@@ -1015,8 +1015,8 @@ sup {
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
     }
 
     .page-footer{
@@ -1054,9 +1054,9 @@ sup {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         -ms-flex-pack: distribute;
-            justify-content: space-around;
+        justify-content: space-around;
         max-width: 775px;
         margin: 2em auto;
     }
@@ -1131,8 +1131,8 @@ sup {
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: stretch;
-            -ms-flex-align: stretch;
-                align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
         height: 100%;
     }
 
@@ -1145,14 +1145,14 @@ sup {
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
 
         width: 25%;
         max-width: none;
@@ -1211,7 +1211,7 @@ sup {
 
     .hometown-tourist__itinerary-wrap{
         -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+        flex-wrap: nowrap;
     }
 
     .hometown-tourist__itinerary-item{
@@ -1240,7 +1240,6 @@ sup {
 
     .cards__card-top-label{
         width: 57px;
-        /* height: auto; */
         margin-left: -28px;
     }
 
@@ -1267,7 +1266,7 @@ sup {
 
     .cards__stamp{
         -webkit-filter: invert(1);
-                filter: invert(1);
+        filter: invert(1);
     }
 
     .cards__card-text{
@@ -1290,7 +1289,7 @@ sup {
 
     .cards__card-visit-me-img{
         -webkit-filter: invert(1);
-                filter: invert(1);
+        filter: invert(1);
         width: 150px;
         margin-bottom: .5em;
     }
@@ -1305,7 +1304,16 @@ sup {
 
     .social-links-list{
         padding-top: 0;
+        width: 100px;
     }
+
+    .social-links-list__image{
+        -webkit-filter: invert(1);
+        -ms-filter: invert(1);
+        filter: invert(1);
+    }
+
+    .ie11 .st0{fill:#000000 !important;}
 }
 
 
