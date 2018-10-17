@@ -1313,7 +1313,7 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
         filter: invert(1);
     }
 
-    .st0{fill:#000000 !important;}
+    .ie11 .st0{fill:#000000 !important;}
 }
 
 
