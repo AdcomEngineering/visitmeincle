@@ -276,7 +276,6 @@ sup {
     margin: 0 auto;
 }
 
-
 .events__event{
     background-size: cover;
     padding: 4em 8%;
@@ -1180,7 +1179,18 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
     }
 
     .social-links-list__item{
+        position: relative;
         padding: .3em;
+    }
+
+    .social-links-list__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: rgba(1,1,1,0);
+        z-index: 10;
     }
 
     .social-links-list__image{
