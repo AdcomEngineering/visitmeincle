@@ -702,19 +702,6 @@ sup {
     }
 }
 
-@media only screen and (min-width: 50em) { /* 800 */
-    .dcle-planning-tools__list{
-        width: 735px;
-    }
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -970,7 +957,19 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
 }
 
 
+.social-links-list__item{
+    position: relative;
+}
 
+.social-links-list__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: rgba(1,1,1,0);
+    z-index: 10;
+}
 
 
 @media only screen and (min-width: 25em) { /* 400 */
@@ -1179,18 +1178,7 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
     }
 
     .social-links-list__item{
-        position: relative;
         padding: .3em;
-    }
-
-    .social-links-list__link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        color: rgba(1,1,1,0);
-        z-index: 10;
     }
 
     .social-links-list__image{
