@@ -658,13 +658,11 @@ sup {
 
 .dcle-planning-tools__copy{
     font-family: 'PT Mono', monospace;
-    margin-top: auto;
 }
 
 .btn--guide-download{
     width: 145px;
     padding: .25em;
-    margin-top: auto;
     margin-bottom: 2em;
 }
 
