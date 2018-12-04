@@ -586,10 +586,6 @@ sup {
     margin: 0 auto 1.25em auto;
 }
 
-
-
-
-
 .dcle-planning-tools{
     padding: 0 0.25em;
 	margin: 0 auto;
@@ -700,9 +696,6 @@ sup {
     }
 }
 
-
-
-
 .addthis_inline_follow_toolbox{
     width: 180px;
     margin: 1.5em auto;
@@ -739,8 +732,6 @@ sup {
     padding: 2em 1em;
 }
 
-.cards__card--modal.share .cards__image--modal{}
-
 .cards__card--modal.share .share-card{
     display: block;
     background: #fff;
@@ -769,13 +760,6 @@ sup {
     padding: .25em 2em;
 }
 
-.cards__card--modal.share .btn--share-card{}
-
-
-
-
-
-
 .modal-wrap .cards__card{
     display: none;
     overflow: visible;
@@ -783,11 +767,6 @@ sup {
 
 .modal-wrap .cards__card[data-selected="true"]{
     display: block;
-}
-
-
-.share-card__itinerary-image{
-
 }
 
 .share-card{
@@ -799,8 +778,6 @@ sup {
     height: 100%;
     max-width: none;
 }
-
-.share-card__copy{}
 
 .debug .flip-container:before,
 .debug .flip-container:after{
@@ -898,17 +875,6 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
 
 /********************************  End card flip animations  ********************************/
 
-
-
-
-
-
-
-
-
-
-
-
 .cards__video-wrap{
     position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -923,12 +889,6 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
 	width: 100%;
     height: 100%;
 }
-
-
-
-
-
-
 
 .page-footer__wrap{
     font-size: 2.3675em;
@@ -1061,10 +1021,6 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
         width: 48%;
         margin-bottom: 1em;
     }
-
-    .flip-container,
-    .front,
-    .back{}
 
     .gallery__header{
         padding: 2.75em 1.5em;
@@ -1201,10 +1157,6 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
         max-width: 900px;
     }
 
-    .flip-container,
-    .front,
-    .back{}
-
     .hometown-tourist__itinerary-wrap{
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -1312,22 +1264,9 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
     .ie11 .st0{fill:#000000 !important;}
 }
 
-
-
-
-@media only screen and (min-width: 72.1875em) { /* 1155 */
-}
-
-
 @media only screen and (min-width: 75em) { /* 1200 */
     .cards--header{
         max-width: 1000px;
-    }
-
-    .flip-container,
-    .front,
-    .back{
-        /* height: 412px; */
     }
 
     .cards__card-top-label{
@@ -1341,6 +1280,11 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
         margin-left: -122px;
     }
 
+    .cards__card-message.cards__card-message--large {
+        width: 65%;
+        margin-left: -30%;
+    }
+
     .cards__card-text{
         font-size: 1.6em;
     }
@@ -1349,30 +1293,9 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
         display: block;
     }
 
-    .cards__card-logo{}
-
-    .share-card__itinerary-image{}
-
-    .cards__share-content-wrapper{}
-
     .cards__card-text--intro{
         margin-top: 33px;
     }
-
-    .cards__card-headline{}
-
-    .cards__card-visit-me-img{}
-
-    .btn--card-back{}
-
-    .social-links-list{}
-
-
-
-
-
-
-
 
     .mark-your-calendar{
         display: -webkit-box;
@@ -1410,10 +1333,6 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
     .btn--planning-tools{
         padding: .25em 2em;
     }
-}
-
-
-@media only screen and (min-width: 83.125em) { /* 1330 */
 }
 
 @media only screen and (min-width: 87.5em) { /* 1400 */
