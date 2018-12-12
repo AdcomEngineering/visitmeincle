@@ -1281,8 +1281,8 @@ _:-ms-fullscreen, :root .flip-container:hover .front{
     }
 
     .cards__card-message.cards__card-message--large {
-        width: 65%;
-        margin-left: -30%;
+        width: 75%;
+        margin-left: -38%;
     }
 
     .cards__card-text{
